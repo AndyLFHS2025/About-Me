@@ -1,0 +1,152 @@
+<html>
+    <title>
+        About Me
+    </title>
+
+    <style>
+        body{
+            background: #AAFFBB;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            text-align:center;
+            color:gray;
+        }
+            table, td, th {
+                text-align: left;
+                width: 40%;
+                border: 3px solid black;
+                border-collapse: collapse;
+            }
+
+            #swimButton{
+                display: none;
+            }
+
+            #codeButton{
+                display: none;
+            }
+
+            #gameButton{
+                display: none;
+            }
+    </style>
+
+<h1>
+    About Me
+</h1>
+
+<body>
+    Hi, I'm Andy! I'm a freshman at Fremd Highschool. 
+    <br><br>
+    <img src="chapter4/fremd.jpg" width=500 height=300>
+    <br><br>
+    I signed up for this club because I enjoy coding as a hobby and want to learn more and collaborate with others.
+    <br><br>
+    Some of my other hobbies include playing and coding video games and sports like swimming.
+    <br><br>
+    <img src="chapter4/minecraft.jpg" width=250 height=200>
+    <img src="chapter4/coding.jpg" width=300 height=200>
+    <img src="chapter4/swimming.jpg" width=300 height=200>
+    <br><br>
+    If you want to know more about my hobbies, click the buttons below.
+    <br><br>
+
+    <input type="button" id="swimButtonId" value="Swimming" onclick="displaySwim()">
+    <input type="button" id="codeButtonId" value="Coding" onclick="displayCode()">
+    <input type="button" id="gameButtonId" value="Gaming" onclick="displayGame()">
+    <div id="displaySwimId"></div>
+    <div id="displayCodeId"></div>
+    <div id="displayGameId"></div>
+    <button onclick="document.location='https://www.teamunify.com/Home.jsp?team=ilpst'" id="swimButton">Learn more about PPD</button>
+    <button onclick="document.location='https://www.w3schools.com/'" id="codeButton">W3 Schools</button>
+    <button onclick="document.location='https://en.wikipedia.org/wiki/Minecraft'" id="gameButton">Minecraft</button>
+</body>
+
+<script>
+var message1 = "";
+var message = "";
+var message = "";
+var click1 = 0;
+var click2 = 0;
+var click3 = 0;
+
+    function displaySwim() {
+
+        click1++;
+
+        if (click1 % 2 == 1) {
+        message1 = "";
+        message2 = "";
+        message3 = "";
+        message1 += "I swim for the Palatine Tigersharks which is part of PPD(Palatine Park District).<br>";
+        message1 += "I've been swimming for 6 years now and plan to swim for Fremd throughout my highschool years as well.<br>";
+        message1 += "My favorite stroke would be freestyle and my fastest stroke would be backstroke.<br>";
+        message1 += "I enjoy swimming since I think that it is a good life skill and also allows me to work out many muscles at the same time.<br>";
+        message1 += "If you'd like to learn more about PPD, click the button below.<br>";
+        document.getElementById('displaySwimId').innerHTML = message1;
+        
+        document.getElementById('swimButton').style.display = "block";
+        }
+
+        else {
+            document.getElementById('displaySwimId').innerHTML = "";
+            document.getElementById('swimButton').style.display = "none";
+        }
+    } 
+
+    function displayCode() {
+        click2++;
+
+        if (click2 % 2 == 1) {
+            message1 = "";
+            message2 = "";
+            message3 = "";
+            message2 += "One of my other interests is coding.<br>";
+            message2 += "I am interested in three languages at the moment, HTML, Python, and Javascript.<br>";
+            message2 += "I am also currently enrolled in AP Computer Science Principles at FHS.<br>";
+            message2 += "I also hope to become a software developer one day.<br>";
+            message2 += "One of my favorite websites to learn about coding on is W3 Schools.<br>";
+            message2 += "If you'd like to visit it, click the button below.";
+            document.getElementById('displayCodeId').innerHTML = message2;
+
+            document.getElementById('codeButton').style.display = "block";
+        }
+
+        else {
+            document.getElementById('displayCodeId').innerHTML = "";
+            document.getElementById('codeButton').style.display = "none";
+
+        }
+}
+
+    function displayGame() {
+        click3++;
+
+        if (click3 % 2 == 1) {
+            message1 = "";
+            message2 = "";
+            message3 = "";
+            message3 += "Among my other two hobbies, I am also an avid gamer.<br>";
+            message3 += "One of my favorite games includes Minecraft.<br>";
+            message3 += "Minecraft is one of the most simple games I have ever played,<br>"
+            message3 += "yet also one of the most entertaining.<br>";
+            message3 += "It's one of my many favorite past times and I will probably<br>";
+            message3 += "continue to play it for a long time.<br>";
+            message3 += "If you want to learn more about Minecraft, click the button below.";
+            document.getElementById('displayGameId').innerHTML = message3;
+
+            document.getElementById('gameButton').style.display = "block";
+        }
+
+    else {
+        document.getElementById('displayGameId').innerHTML = "";
+        document.getElementById('gameButton').style.display = "none";
+
+    }
+        
+    }
+</script>
+
+</html>
