@@ -1,0 +1,100 @@
+<html>
+    <title>
+        About Me
+    </title>
+
+    <style>
+        body{
+            background: #AAFFBB;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            text-align:center;
+            color:gray;
+        }
+            table, td, th {
+                text-align: left;
+                width: 40%;
+                border: 3px solid black;
+                border-collapse: collapse;
+            }
+    </style>
+
+<h1>
+    About Me
+</h1>
+
+<body>
+    Hi, I'm Andy! I'm a freshman at Fremd Highschool. 
+    <br><br>
+    <img src="fremd.jpg" width=250 height=150>
+    <br><br>
+    I signed up for this club because I enjoy coding as a hobby and want to learn more and collaborate with others.
+    <br><br>
+    Some of my other hobbies include playing and coding video games and sports like swimming.
+    <br><br>
+    <img src="game.jpg" width=125 height=100>
+    <img src="coding.jpg" width=150 height=100>
+    <img src="swimming.jpg" width=150 height=100>
+    <br><br>
+    If you want to know more about my hobbies, click the buttons below.
+    <br><br>
+
+    <input type="button" id="swimButtonId" value="Swimming" onclick="displaySwim()">
+    <input type="button" id="codeButtonId" value="Coding" onclick="displayCode()">
+    <input type="button" id="gameButtonId" value="Gaming" onclick="displayGame()">
+    <div id="displaySwimId"></div>
+    <div id="displayCodeId"></div>
+    <div id="displayGameId"></div>
+</body>
+
+<script>
+var message1 = "";
+var message2 = "";
+var message3 = "";
+
+    var click1 = 0;
+    var click2 = 0;
+    var click3 = 0;
+
+    function displaySwim() {
+        message1 = "";
+        click1 += 1;
+        if (click1 % 2 == 1) {
+            message1 += "I swim for the Palatine Tigersharks which is part of PPD(Palatine Park District).<br>";
+            message1 += "I've been swimming for 6 years now and plan to swim for Fremd throughout my highschool years as well.<br>";
+            message1 += "My favorite stroke would be freestyle and my fastest stroke would be backstroke.<br>";
+            message1 += "I enjoy swimming since I think that it is a good life skill and also allows me to work out many muscles at the same time.<br>";
+
+        document.getElementById('displaySwimId').innerHTML = message1;
+        }
+
+        else {
+            document.getElementById('displaySwimId').innerHTML = "";
+        }
+    } 
+
+    function displayCode() {
+        message2 = "";
+        click2 += 1;
+        if (click2 % 2 == 1) {
+            message2 += "I enjoy coding since I find it very interesting.<br>";
+            message2 += "One day, I hope to become a software developer.<br>";
+
+        document.getElementById('displayCodeId').innerHTML = message2;
+        }
+
+        else {
+            document.getElementById('displayCodeId').innerHTML = "";
+        }
+    } 
+        
+
+
+    function displayGame() {
+        
+    }
+</script>
+
+</html>
